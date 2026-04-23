@@ -11,8 +11,13 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v6
 
-      - name: check files
+      - name: Docker build
+        run: docker build -t my-app .
+
+      - name: Docker push
         run: |
-          ls -la
+          docker login -u prashant6749 -p 123456789
+          docker tag my-app prashant6749/my-app:latest
+          docker push prashant6749/my-app:latest
 
       
