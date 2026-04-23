@@ -1,0 +1,14 @@
+name: Build and Test
+
+on: workflow_dispatch
+
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: add 2 numbers 
+        run: expr 10 + 20 
+
+      
