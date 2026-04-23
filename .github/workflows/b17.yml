@@ -13,7 +13,6 @@ jobs:
 
       - name: check files
         run: |
-          cd GA
           ls -la
 
       
